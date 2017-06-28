@@ -152,6 +152,12 @@ function ListEditor(/*VariantPredicateValue*/ variantPredicateValue, property,
 
         // jquery dialog display
         dataEditor.dialog('open');
+        var newTopVal = valueContainer.position().top - ( $('.ui-dialog').outerHeight()/2 )+'px';
+        var newLeftVal = valueContainer.position().left -  ( $('.ui-dialog').outerWidth() ) +'px';
+        console.log(newTopVal);
+        console.log(newLeftVal);
+        $('.data-editor').parent().css('left', newLeftVal);
+        $('.data-editor').parent().css('top', newTopVal);
     }
 
     function save(variantPredicateValue, newValues) {

@@ -57,10 +57,18 @@ function BaseEditor(variantPredicateValue, editorContainerSelector, editorTempla
         // jquery dialog set up
         var dataEditor = $(editorContainerSelector).dialog(dialogOptions);
         dataEditor.dialog( "option", "position",
-            { my: "center center", at: "center center-50%", of: valueContainer, collision: "flipfit flipfit" });
+            { my: "center bottom", at: "center top", of: valueContainer, collision: "fit" });
 
-        // jquery dialog display
+       
+
         dataEditor.dialog('open');
+        // jquery dialog display
+         var newTopVal = valueContainer.position().top - ( $('.ui-dialog').outerHeight()/2 )+'px';
+        var newLeftVal = valueContainer.position().left -  ( $('.ui-dialog').outerWidth() ) +'px';
+        console.log(newTopVal);
+        console.log(newLeftVal);
+        $('.data-editor').parent().css('left', newLeftVal);
+        $('.data-editor').parent().css('top', newTopVal);
     }
 
     function save(variantPredicateValue, newValue) {

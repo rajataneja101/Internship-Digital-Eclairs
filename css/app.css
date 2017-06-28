@@ -412,13 +412,13 @@ div.data-editor div.bubble-triangle {
     position: absolute;
     height: 15px;
     width: 15px;
-    left: -7px;
-    bottom: 90%;
+    right: -11px !important;
+    bottom: 39%;
     background-color: white;
     border: 1px solid #c5c5c5;
     border-top: none;
     border-right: none;
-    transform: rotate(45deg);
+    transform: rotate(225deg);
     right: 50%;
 }
 
